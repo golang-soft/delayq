@@ -1,5 +1,5 @@
 # DelayQ
-## [项目地址](https://github.com/liuxc2016/delayq) 
+## [项目地址](https://github.com/golang-soft/delayq) 
 
 - 基于 Redis 的延迟消息队列中间件，采用 Golang 开发，支持 PHP、Golang 等多种语言客户端。
 - 参考 [有赞延迟队列设计](http://tech.youzan.com/queuing_delay) 中的部分设计，优化后实现。
@@ -11,6 +11,7 @@
 - 订单完成后, 如果用户一直未评价, 5天后自动好评。
 - 会员到期前3天，短信通知续费。
 - 其他针对某个任务，延迟执行功能的需求。
+- 定时处理的job到时间自动执行一些功能的需求。
 
 ## 实现原理
 
@@ -115,7 +116,7 @@ DelayQ收到停止信号，扫瞄中止
 
 ```
 cd dqclient
-go orun dqclient.go
+go run main.go
 ```
 
 ### 日志
